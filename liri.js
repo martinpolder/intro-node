@@ -53,9 +53,16 @@ function findGig() {
     axios.get(queryURL).then(
 
         function (response) {
-            console.log("response-test:")
-            // always comes up undefined >:(
-            console.log(response.data.venues)
+           console.log("<<<<<<<<ARTIST:>>>>>>>>")
+            console.log(gig)
+           console.log("<<<<<<<<VENUE:>>>>>>>>")
+            console.log(response.data[0].venue.name)
+            console.log("<<<<<<<<LOCATION:>>>>>>>>")
+            console.log(response.data[0].venue.city + ", " + response.data[0].venue.country)
+            console.log("<<<<<<<<TIME:>>>>>>>>")
+            console.log(response.data[0].datetime)
+
+
         });
 
 };
